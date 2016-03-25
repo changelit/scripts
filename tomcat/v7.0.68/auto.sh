@@ -27,7 +27,7 @@ set -x \
     && rm bin/*.bat \
     && rm tomcat.tar.gz* \
     && rm -rf webapps/* \
-    && mkidr webapps/ROOT
+    && mkdir webapps/ROOT
 
 
 #modify configuration file

@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='utf-8'?>
+<Server port="8090" shutdown="SHUTDOWN">
+  <Listener className="org.apache.catalina.startup.VersionLoggerListener" />
+  <Listener className="org.apache.catalina.core.AprLifecycleListener" SSLEngine="on" />
+  <Listener className="org.apache.catalina.core.JasperListener" />
+  <Listener className="org.apache.catalina.core.JreMemoryLeakPreventionListener" />
+  <Listener className="org.apache.catalina.mbeans.GlobalResourcesLifecycleListener" />
+  <Listener className="org.apache.catalina.core.ThreadLocalLeakPreventionListener" />
+ 
+  <GlobalNamingResources>
+    <Resource name="UserDatabase" auth="Container"
+              type="org.apache.catalina.UserDatabase"
+              description="User database that can be updated and saved"
+              factory="org.apache.catalina.users.MemoryUserDatabaseFactory"
+              pathname="conf/tomcat-users.xml" />
+  </GlobalNamingResources>
+  <Service name="Catalina">
+    <Connector port="80" protocol="HTTP/1.1"
+               connectionTimeout="20000"
+		URIEncoding="UTF-8"
+               maxThreads="500"
+                acceptCount="50"
+                maxKeepAliveRequests="50"
+                compression="on"
+                compressableMimeType="text/html,text/xml,text/javascript,text/css,text/plain"
+                socketBuffer="9000"
+                upgradeAsyncWriteBufferSize="8192"
+                processorCache="1000" />
+              
+    <Engine name="Catalina" defaultHost="localhost">
+      <Realm className="org.apache.catalina.realm.LockOutRealm">
+        <Realm className="org.apache.catalina.realm.UserDatabaseRealm"
+               resourceName="UserDatabase"/>
+      </Realm>
+      <Host name="localhost"  appBase="webapps"
+            unpackWARs="true" autoDeploy="false">
+        <!--<Context docBase="" path=""  reloadable="true" ></Context> -->
+        <!--<Valve className="org.apache.catalina.valves.AccessLogValve" directory="/logs/tomcat/"
+               prefix="access_log." suffix=".log" rotatable="true"
+               pattern="%t %h &quot;%r&quot; %s %b &quot;%{Referer}i&quot; %D" fileDateFormat="yyyy-MM-dd-HH" resolveHosts="false"/> -->
+      </Host>
+    </Engine>
+  </Service>
+</Server>

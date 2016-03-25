@@ -31,6 +31,6 @@ set -x \
 
 
 #modify configuration file
-Git_URL=https://github.com/changelit/scripts/tomcat/v7.0.68
+Git_URL=https://raw.githubusercontent.com/changelit/scripts/master
 wget $Git_URL/server.xml -O $CATALINA_HOME/conf/server.xml
 wget $Git_URL/catalina.sh -O $CATALINA_HOME/bin/catalina.sh

@@ -34,3 +34,6 @@ set -x \
 Git_URL=https://raw.githubusercontent.com/changelit/scripts/master/tomcat/v7.0.68
 wget $Git_URL/server.xml -O $CATALINA_HOME/conf/server.xml
 wget $Git_URL/catalina.sh -O $CATALINA_HOME/bin/catalina.sh
+ln -s $CATALINA_HOME/bin/startup.sh /etc/init.d/tomcat
+echo "# chkconfig: 2345 90 90" >>$CATALINA_HOME/bin/startup.sh
+chkconfig tomcat on 

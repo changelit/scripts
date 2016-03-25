@@ -1,6 +1,6 @@
 #!/bin/sh
 JAVA_HOME="/usr/java"
-JAVA_OPTS="-server -Xms212m -Xmx512m -XX:PermSize=122m -XX:MaxPermSize=212m"
+JAVA_OPTS="-server -Dfile.encoding=UTF8 -Dsun.jnu.encoding=UTF8 -Xms212m -Xmx512m -XX:PermSize=122m -XX:MaxPermSize=212m"
 # Licensed to the Apache Software Foundation (ASF) under one or more
 # contributor license agreements.  See the NOTICE file distributed with
 # this work for additional information regarding copyright ownership.

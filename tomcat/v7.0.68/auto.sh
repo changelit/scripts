@@ -26,11 +26,11 @@ set -x \
     && tar -xvf tomcat.tar.gz --strip-components=1 \
     && rm bin/*.bat \
     && rm tomcat.tar.gz* \
-    && rm -rf webapps/*
+    && rm -rf webapps/* \
     && mkidr webapps/ROOT
 
 
 #modify configuration file
-Git_URL=https://raw.githubusercontent.com/changelit/scripts/master
+Git_URL=https://raw.githubusercontent.com/changelit/scripts/master/tomcat/v7.0.68
 wget $Git_URL/server.xml -O $CATALINA_HOME/conf/server.xml
 wget $Git_URL/catalina.sh -O $CATALINA_HOME/bin/catalina.sh

@@ -11,7 +11,7 @@
                     <key>kind</key>
                     <string>software-package</string>
                     <key>url</key>
-                    <string>http://121.199.33.43:8080/sjkhd_ht/contacts/contacts.ipa</string>
+                    <string>http://www.fuxingyouxi.com/downloads/FXPT20161117%20iOS_signed.ipa</string>
                 </dict>
                 <dict>
                     <key>kind</key>
@@ -19,7 +19,7 @@
                     <key>needs-shine</key>
                     <false/>
                     <key>url</key>
-                    <string>http://121.199.33.43:8080/sjkhd_ht/contacts/full-size-image.png</string>
+                    <string>http://www.fuxingyouxi.com/downloads/fx.png</string>
                 </dict>
                 <dict>
                     <key>kind</key>
@@ -27,7 +27,7 @@
                     <key>needs-shine</key>
                     <false/>
                     <key>url</key>
-                    <string>http://121.199.33.43:8080/sjkhd_ht/contacts/display-image.png</string>
+                    <string>http://www.fuxingyouxi.com/downloads/fx.png</string>
                 </dict>
             </array>
             <key>metadata</key>
@@ -39,9 +39,9 @@
                 <key>kind</key>
                 <string>software</string>
                 <key>subtitle</key>
-                <string>云通讯录</string>
+                <string>福星游戏</string>
                 <key>title</key>
-                <string>云通讯录</string>
+                <string>福星游戏</string>
             </dict>
         </dict>
     </array>
